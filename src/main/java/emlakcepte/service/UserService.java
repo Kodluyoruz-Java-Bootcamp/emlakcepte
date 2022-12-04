@@ -1,22 +1,18 @@
 package emlakcepte.service;
 
 import java.util.List;
-import org.springframework.stereotype.Component;
 
-import emlakcepte.dao.RealtyDao;
 import emlakcepte.dao.UserDao;
 import emlakcepte.model.User;
 
 
-@Component
 public class UserService {
 		
 	private UserDao userDao = new UserDao();
-	private RealtyService realtyService = new RealtyService();
-//	private RealtyDao realtyDao = new RealtyDao();
+
 	
-	
-	private static UserService userService = new UserService();
+	// Singleton Pattern	
+/*	private static UserService userService = new UserService();
 	
 	private UserService() {
 		
@@ -29,7 +25,7 @@ public class UserService {
 	public static UserService getSameInstance() {
 		return userService;
 	}
-	
+	*/
 	public void createUser(User user) {		
 		//UserDao userDao = new UserDao(); tekrar tekrar oluşturmamıza gerek yok
 		System.out.println("ben bir userDao objesiyim:" + userDao.toString());

@@ -21,7 +21,7 @@ public class RealtyService {
 	
 	public void createRealty(Realty realty) {	
 		
-		userService.printAllUser();
+		//userService.printAllUser();
 		
 		if (UserType.INDIVIDUAL.equals(realty.getUser().getType()) ) {
 			// en fazla 5 ilan girebilir.
